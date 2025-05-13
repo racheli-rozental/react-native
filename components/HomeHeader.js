@@ -1,8 +1,14 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity,ImageBackground } from "react-native"
 import { Ionicons } from "@expo/vector-icons"
 
 const HomeHeader = ({ title, viewMode, setViewMode, navigation, isDarkMode }) => {
   return (
+    <ImageBackground
+          source={require('../assets/Fotolia_25783431_Subscription_XL.jpg')}
+          style={styles.headerImage}
+          imageStyle={{ borderRadius: 8, opacity: 0.7 }}
+        >
+       
     <View style={styles.header}>
       <Text style={[styles.title, { color: isDarkMode ? "#fff" : "#000" }]}>{title}</Text>
       <View style={styles.headerButtons}>
@@ -24,6 +30,7 @@ const HomeHeader = ({ title, viewMode, setViewMode, navigation, isDarkMode }) =>
         </TouchableOpacity>
       </View>
     </View>
+    </ImageBackground>
   )
 }
 

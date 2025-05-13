@@ -1,9 +1,10 @@
 import { View, Text, StyleSheet, ImageBackground } from "react-native"
+import image from '../assets/Fotolia_25783431_Subscription_XL.jpg'; // עדכן עם הנתיב הנכון לתמונה שלך
 
 const TaskDetailsHeader = ({ title, isDarkMode }) => {
   return (
     <ImageBackground
-      source={{ uri: "https://picsum.photos/800/200" }}
+      source={require('../assets/Fotolia_25783431_Subscription_XL.jpg')}
       style={styles.headerImage}
       imageStyle={{ borderRadius: 8, opacity: 0.7 }}
     >
